@@ -7,7 +7,7 @@
     <p class="message-desc">Send at: <%= @message.send_at.strftime("%d/%m/%Y") %></p>
     <p class="message-desc"><%= image_tag @message.attached_img, size: "100x100" if @message.image? %></p>
 
-    <h3 class="reply-to-msg">Content Parts:</h3>
+    <h3 class="reply-to-msg">Message Parts:</h3>
     <%= render @message.messageparts %>
     <!-- Add conditional so taht the edit and destory links only apear for th user how created -->
     <div class="links btn-group">

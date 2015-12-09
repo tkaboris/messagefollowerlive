@@ -23,6 +23,7 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/puma'
 require 'capistrano/sidekiq'
+require "whenever/capistrano"
 
 # require 'capistrano/passenger'
 

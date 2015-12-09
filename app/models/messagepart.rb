@@ -4,21 +4,20 @@ class Messagepart < ActiveRecord::Base
   has_attached_file :image, styles: { large: "500x500", medium: "300x350#" }
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  validates_presence_of :contentparttitle
 
   #only un_delivered message-parts
   scope :un_delivered, -> { where("delivered_at IS ?", nil) }
 
   # gives the messagepart which has to mail today, for all message_id(s) returned by the above scope
   scope :message_parts_to_mail, -> { where("(DATE(send_at) = ? OR DATE(send_at) = ?) AND delivered_at IS ?", Date.today, 1.day.from_now.to_date, nil).order(:part_no) }
+  validates_presence_of :send_at
 
-  # after_save :send_notification_mails_to_listners
-
-
-  # def send_notification_mails_to_listners
-  #     speaker.listeners.each do |l|
-
-  #     end
-  # end
+  validate do |messagepart|
+    if messagepart.send_at_changed? && messagepart.delivered_at.present?
+      messagepart.errors[:send_at] << "can't be change, emails are already scheduled!"
+    end
+  end
 
   class << self
 

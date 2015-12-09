@@ -5,6 +5,7 @@ class Message < ActiveRecord::Base
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates_presence_of :send_at
+  validates_presence_of :title
 
   #returns the message which needs to be process today
   scope :todays_messages, -> { where("(DATE(send_at) = ? OR DATE(send_at) = ?) AND delivered_at IS ?", Date.today, 1.day.from_now.to_date, nil) }
@@ -15,6 +16,12 @@ class Message < ActiveRecord::Base
   #this will give listeners for message object
   #ref: http://apidock.com/rails/Module/delegate
   delegate :listeners, to: :speaker
+
+  validate do |message|
+    if message.send_at_changed? && message.delivered_at.present?
+      message.errors[:send_at] << "send_at can't be change, emails are already scheduled!"
+    end
+  end
 
   #class methods at one place
   class << self
@@ -39,11 +46,11 @@ class Message < ActiveRecord::Base
 
     #get the date of sending email, by including listener's profile time(hour) and timezone
     def send_at_for send_at, listener
-      DateTime.new(send_at.year, send_at.month, send_at.day, listener.recieve_message_at.to_i, 0, 0).change(:offset => listener.time_zone).utc rescue send_at
+      offset = Time.now.in_time_zone(listener.time_zone).strftime("%:z") rescue "+00:00"
+      DateTime.new(send_at.year, send_at.month, send_at.day, listener.recieve_message_at.to_i, 0, 0).change(:offset => offset).utc rescue send_at
     end
   end
 
-  #
   def valid_listener? listener
     ls = listener.listeners_speakers.where(speaker_id: speaker.id).first
     ls.created_at < created_at if ls

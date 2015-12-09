@@ -11,7 +11,7 @@ class MessagepartsController < ApplicationController
     if @messagepart.save
       redirect_to message_path(@message)
     else
-      render 'new'
+      render 'messages/show', id: @message.id
     end
   end
 

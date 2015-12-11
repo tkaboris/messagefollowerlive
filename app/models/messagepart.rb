@@ -28,25 +28,27 @@ class Messagepart < ActiveRecord::Base
 
     #this is to schedule the message-part email to listeners based on there timezone and time(from listeners profile)
     def send_message_parts_to_listeners
-      Rails.logger.info "######send_message_parts_to_listeners START"
+      Rails.logger.info "######send_message_parts_to_listeners START #{Time.now}"
       messages = Message.messages_to_mail
 
       messages.each do |message|
         messageparts = message.messageparts.message_parts_to_mail
 
         messageparts.each do |messagepart|
+          Rails.logger.info "message-part : #{messagepart.id}"
           message.listeners.each do |listener|
 
             next unless message.valid_listener?(listener)
 
             send_at = Message.send_at_for messagepart.send_at, listener
             SendMessagePartEmailWorker.perform_at(send_at, messagepart.id, listener.id)
+            Rails.logger.info "message-part : scheduling for :: messagepart_id: #{messagepart.id}, send_at:#{send_at}, listener_id: #{listener.id}, email #{listener.email}"
           end
 
           messagepart.update_attributes(delivered_at: Time.now)
         end
       end
-      Rails.logger.info "######send_message_parts_to_listeners END"
+      Rails.logger.info "######send_message_parts_to_listeners END #{Time.now}"
     end
   end
 

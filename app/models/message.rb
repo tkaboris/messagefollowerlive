@@ -26,22 +26,25 @@ class Message < ActiveRecord::Base
   #class methods at one place
   class << self
     def send_messages_to_listeners
-      Rails.logger.info "######send_messages_to_listeners START"
+      Rails.logger.info "######send_messages_to_listeners START #{Time.now}"
 
       messages = Message.todays_messages
 
       messages.each do |message|
+        Rails.logger.info "message : #{message.id}"
+
         message.listeners.each do |listener|
 
           next unless message.valid_listener?(listener)
 
           send_at = send_at_for(message.send_at, listener)
           SendMessageEmailWorker.perform_at(send_at, message.id, listener.id)
+          Rails.logger.info "message : scheduling for :: message_id: #{message.id}, send_at:#{send_at}, listener_id: #{listener.id}, email #{listener.email}"
         end
         message.update_attributes(delivered_at: Time.now)
       end
 
-      Rails.logger.info "######send_messages_to_listeners END"
+      Rails.logger.info "######send_messages_to_listeners END #{Time.now}"
     end
 
     #get the date of sending email, by including listener's profile time(hour) and timezone

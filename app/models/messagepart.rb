@@ -10,7 +10,7 @@ class Messagepart < ActiveRecord::Base
   scope :un_delivered, -> { where("delivered_at IS ?", nil) }
 
   # gives the messagepart which has to mail today, for all message_id(s) returned by the above scope
-  scope :message_parts_to_mail, -> { where("(DATE(send_at) = ? OR DATE(send_at) = ?) AND delivered_at IS ?", Date.today, 1.day.from_now.to_date, nil).order(:part_no) }
+  scope :message_parts_to_mail, -> { where("DATE(send_at) <= ? AND delivered_at IS ?", Date.today, nil).order(:part_no) }
   validates_presence_of :send_at
 
   validate do |messagepart|

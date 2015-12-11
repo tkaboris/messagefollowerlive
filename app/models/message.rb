@@ -8,7 +8,7 @@ class Message < ActiveRecord::Base
   validates_presence_of :title
 
   #returns the message which needs to be process today
-  scope :todays_messages, -> { where("(DATE(send_at) = ? OR DATE(send_at) = ?) AND delivered_at IS ?", Date.today, 1.day.from_now.to_date, nil) }
+  scope :todays_messages, -> { where("DATE(send_at) <= ? AND delivered_at IS ?", Date.today, nil) }
 
   #returns messages who have messageparts for sending email
   scope :messages_to_mail, -> { where("id IN (?) and delivered_at IS NOT ?", Messagepart.message_ids_having_un_delivered_messageparts, nil) }
@@ -56,9 +56,9 @@ class Message < ActiveRecord::Base
     ls.created_at < created_at if ls
   end
 
-  #default date for message should be next date.
+  #default date for message is current date!
   def default_date
-    Date.today + 1.day
+    Date.today
   end
 
   #default date for message_part should be next date of last message-part OR next date of message if there are no message-parts present.

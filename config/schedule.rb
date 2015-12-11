@@ -19,7 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every :day, at: '12:00 pm' do
+every :hour do
   runner "Message.send_messages_to_listeners"
   runner "Messagepart.send_message_parts_to_listeners"
 end

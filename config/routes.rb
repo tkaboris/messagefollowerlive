@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :messageparts
   end
 
+  resources :categories, only: [:new, :create, :show]
+
   root 'pages#home'
   get '/message/delete/:id' => "delete#message"
   get '/messagepart/delete/:id' => "delete#messagepart"

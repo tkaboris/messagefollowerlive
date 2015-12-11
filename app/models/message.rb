@@ -1,5 +1,7 @@
 class Message < ActiveRecord::Base
   belongs_to :speaker
+  has_many :message_categories
+  has_many :categories, through: :message_categories
   has_many :messageparts, dependent: :destroy
   has_attached_file :image, styles: { large: "500x500", medium: "300x350#" }
 

@@ -10,13 +10,39 @@
 <div class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
+      <% if speaker_signed_in? %>
+      <%= link_to "Message Follower", messages_path, class: "navbar-brand" %>
+      <% else %>
       <%= link_to "Message Follower", root_path, class: "navbar-brand" %>
+      <% end %>
 </div>
     <% if speaker_signed_in? %>
       <button type="button" class="btn btn-secondary" >
         <%= link_to "New Message", new_message_path %>
       </button>
     <% end %>
+
+    <ul class="navbar-link">
+      <li class="dropdown">
+        <%= link_to '#', class: "btn btn-default dropdown-toggle", "data-toggle" => "dropdown" do %>
+          Category <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <% Category.all.each do |category| %>
+              <li> <%= link_to category.name, category_path(category) %></li>
+            <% end %>
+            <% if speaker_signed_in? %>
+              <li class="divider"></li>
+              <li>
+                <%= link_to(new_category_path) do %>
+                  New Category
+                <% end %>
+              </li>
+
+            <% end %>
+          </ul>
+      </li>
+    </ul>
 
 
 
@@ -48,6 +74,7 @@
 
   <ul class="dropdown-menu">
     <% if speaker_signed_in? %>
+      <li><%= link_to "View Profile", speaker_path(current_speaker) %></li>
       <li><%= link_to "Edit Account", edit_speaker_registration_path %></li>
       <li><%= link_to "Sign out", destroy_speaker_session_path,  :method => :delete %></li>
     <% else %>
@@ -60,30 +87,7 @@
 
 
 </div>
-<!--  -->
 
-    <!-- <ul class="nav navbar-nav">
-      <li><%= link_to "Speaker", new_speaker_registration_path %>
-      </li>
-      <li><%= link_to "New Listener", new_listener_registration_path %>
-      </li>
-      <% if speaker_signed_in? %>
-        <li><%= link_to "Sign Out", destroy_speaker_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Log In", new_speaker_session_path %></li>
-      <% end %>
-
-    </ul>
-    <% if listener_signed_in? %>
-
-      <p><%= link_to "Edit Account", edit_listener_registration_path, class: "navbar navbar-text navbar-link" %>
-      <p><%= link_to "sign out", destroy_listener_session_path,  :method => :delete, class: "navbar-right navbar-text navbar-link" %></p>
-    <% end %>
-    <% if speaker_signed_in? %>
-      <p><%= link_to "Create new Message", new_message_path, class: "navbar-right navbar-text navbar-link" %></p>
-      <p><%= link_to "Edit Account", edit_speaker_registration_path, class: "navbar navbar-text navbar-link" %>
-    <% end %>
-  </div> -->
 
 </div>
 

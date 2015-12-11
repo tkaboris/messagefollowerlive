@@ -19,7 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 5.minutes do
+set :output, "log/cron.log"
+env :TZ, "UTC"
+env :PATH, "$PATH:/home/rails/.rbenv/shims:/home/rails/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+every :hour do
   runner "Message.send_messages_to_listeners"
   runner "Messagepart.send_message_parts_to_listeners"
 end

@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   end
 
   root 'pages#home'
+  get '/message/delete/:id' => "delete#message"
+  get '/messagepart/delete/:id' => "delete#messagepart"
   # root 'messages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -19,7 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every :hour do
+every 5.minutes do
   runner "Message.send_messages_to_listeners"
   runner "Messagepart.send_message_parts_to_listeners"
 end

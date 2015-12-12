@@ -1,8 +1,14 @@
-<%= simple_form_for @message  do |f| %>
+<%= simple_form_for @message, html: { multipart: true }  do |f| %>
   <%= f.input :title, label: "Message Title"  %>
   <%= f.input :description, label: "Short Description" %>
-  <%= f.input :content %>
-  <%= f.input :send_at, label: "Send at (UTC)", :as => :date_picker, input_html: { data: {date_options: { defaultDate: @message.default_date, minDate: @message.default_date }}} %>
+
+  <%= f.input :content, :as => :text, :input_html => { 'rows' => 10} %>
+  <strong>Category:</strong>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+    <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+    <% end %>
+  <%= f.input :send_at, :as => :date_picker, input_html: { data: {date_options: { defaultDate: @message.default_date, minDate: @message.default_date }}} %>
+
   <%= f.input :image, label: "Attach image" %>
   <i class="glyphicon glyphicon-camera glyphicon-2x" id="msg_camera_icon"></i>
   <%= image_tag @message.attached_img, size: "100x100", id: "attached_image" %><br/>

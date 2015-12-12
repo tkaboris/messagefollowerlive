@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all.order("created_at DESC")
+
   end
 
   def show
@@ -37,12 +38,15 @@ class MessagesController < ApplicationController
     end
   end
 
-
+  def destroy
+    @message.destroy
+    redirect_to root_path
+  end
 
 
   private
     def message_params
-      params.require(:message).permit(:title, :description, :content, :send_at, :image)
+      params.require(:message).permit(:title, :description, :content, :picture, category_ids: [])
     end
 
     def find_message

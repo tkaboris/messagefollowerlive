@@ -1,10 +1,22 @@
- <h2><%= @speaker.name %>
- <button class="btn btn-default btn-xs dropdown-toggle" type="button"  >
-    <%= link_to "Subscribe to this Speaker" %>
-  </button>
-
-  <input id="accept" name="accept" type="checkbox" value="1" />
-  </h2>
-
-
+ <div class="row">
+  <div class="col-md-4 col-md-offset-4 center">
+    <%= gravatar_for @speaker, size:200 %>
+    <hr/>
+  </div>
 </div>
+<%= image_tag(@avatar, size: "250x150", class: "gravatar")  %>
+
+
+ <h2><%= @speaker.name %><%= @speaker.lastname %>
+  <%= link_to "Subscribe to this Speaker", subscribe_speaker_path(@speaker), class: "btn btn-default btn-xs" %>
+  <p>
+
+
+  <% @messages.each do |m| %>
+  <h4><%= link_to m.title, message_path(m) %></h4>
+
+
+
+  </p>
+</h2>
+<% end %>

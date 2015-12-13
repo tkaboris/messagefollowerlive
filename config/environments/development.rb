@@ -41,14 +41,14 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :test
 
   config.action_mailer.default_url_options = { host: 'localhost',  port: 3000 }
   ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['SMTP_USER_NAME'],
-    :password => ENV['SMTP_PASSWORD'],
-    :address => ENV['SMTP_ADDRESS'],
-    :port => ENV['SMTP_PORT'],
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
     :authentication => :plain,
     :enable_starttls_auto => true
   }

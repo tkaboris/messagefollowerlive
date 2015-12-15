@@ -49,10 +49,9 @@ server '159.203.118.37', user: 'rails', roles: %w{app db web}
 # Global options
 # --------------
  set :ssh_options, {
-  #keys: %w(/home/rlisowski/.ssh/id_rsa),
+  keys: %w(~/.ssh/messagefollower.pem),
   forward_agent: true,
-  user: 'rails',
-  auth_methods: %w(password)
+  user: 'rails'
 }
 #
 # The server-based syntax can be used to override options:

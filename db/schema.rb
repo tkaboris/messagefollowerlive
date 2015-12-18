@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215081441) do
+ActiveRecord::Schema.define(version: 20151218143719) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 20151215081441) do
     t.string   "lastname"
     t.string   "time_zone"
     t.string   "recieve_message_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "listeners", ["email"], name: "index_listeners_on_email", unique: true
@@ -108,6 +112,11 @@ ActiveRecord::Schema.define(version: 20151215081441) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "organization"
   end
 
   add_index "speakers", ["email"], name: "index_speakers_on_email", unique: true

@@ -57,6 +57,7 @@
   <ul class="dropdown-menu">
 
     <% if listener_signed_in? %>
+      <li class="round-image-50"><%= image_tag(current_listener.avatar.url(:thumb)) %></li>
       <li><%= link_to "Edit Account", edit_listener_registration_path %></li>
       <li><%= link_to "Sign out", destroy_listener_session_path,  :method => :delete %></li>
       <% else %>
@@ -74,6 +75,7 @@
 
   <ul class="dropdown-menu">
     <% if speaker_signed_in? %>
+    <li class="round-image-50"><%= image_tag(current_speaker.avatar.url(:thumb)) %></li>
       <li><%= link_to "View Profile", speaker_path(current_speaker) %></li>
       <li><%= link_to "Edit Account", edit_speaker_registration_path %></li>
       <li><%= link_to "Sign out", destroy_speaker_session_path,  :method => :delete %></li>

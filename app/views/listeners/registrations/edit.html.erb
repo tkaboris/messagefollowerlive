@@ -4,6 +4,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.file_field :avatar %>
     <%= f.association :speakers, as: :check_boxes, label_method: :email, value_method: :id %>
     <%= f.input :name, required: true, autofocus: true %>
     <%= f.input :lastname, required: true, autofocus: true %>

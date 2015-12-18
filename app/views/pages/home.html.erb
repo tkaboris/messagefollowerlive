@@ -15,10 +15,8 @@
 
         </div>
         <div id="sectionB" class="tab-pane fade">
-            <h3>Messages</h3>
-            <% @messages.each do |message| %>
-            <p><%= link_to message.title, message_path(message) %></p>
-            <% end %>
+            <hr/>
+<p><%= render partial: "messages/index" %></p>
         </div>
 
 

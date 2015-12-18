@@ -39,6 +39,7 @@ gem 'momentjs-rails', '~> 2.9', :github => 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 # Easy file attachment management for ActiveRecord
 gem "paperclip", "~> 4.3"
+gem 'activeadmin', github: 'activeadmin'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

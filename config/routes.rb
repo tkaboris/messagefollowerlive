@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   require "sidekiq/web"
   #this is to open sidekiq console, in production env need to set env vars, and for other envs it will not ask auth
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|

@@ -1,4 +1,5 @@
 ActiveAdmin.register Speaker do
+  permit_params :email, :password, :password_confirmation
 
   index do
   column :id
@@ -6,7 +7,9 @@ ActiveAdmin.register Speaker do
   column :name
   column :Lastname
   column :Organization
+  actions
 end
+
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

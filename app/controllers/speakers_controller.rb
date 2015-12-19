@@ -13,6 +13,8 @@ class SpeakersController < ApplicationController
 
   end
 
+
+
   def new
     @speaker = Speaker.new
   end

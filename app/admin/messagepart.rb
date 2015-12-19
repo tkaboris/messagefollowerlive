@@ -1,13 +1,4 @@
-ActiveAdmin.register Listener do
-  permit_params :email, :password, :password_confirmation
-
-  index do
-  column :id
-  column :email
-  column :name
-  column :Lastname
-  column :Organization
-end
+ActiveAdmin.register Messagepart do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

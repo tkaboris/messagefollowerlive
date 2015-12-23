@@ -6,7 +6,15 @@
   <body>
     <h3>Hi <%= @listener.name %>, </h3>
     <p><%= @messagepart.message.speaker.name %> has sent a message part for you.</p><br/>
+    <h3 style="color: #000;">Message Part title: </h3> <hr /><%= @messagepart.contentparttitle %>
+    <p ><%= raw @messagepart.contentpart %></p><br />
+  </body>
+
+  <!-- <body>
+    <h3>Hi <%= @listener.name %>, </h3>
+    <p><%= @messagepart.message.speaker.name %> has sent a message part for you.</p><br/>
     <h3 style="color: #000;">Message Part title: <strong style="font-size: 14px; color: #444;"><%= @messagepart.contentparttitle %></strong></h3><hr />
     <p style="font-size: 12px;"><%= @messagepart.contentpart %></p><br />
-  </body>
+  </body> -->
+
 </html>

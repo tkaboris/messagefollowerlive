@@ -1,5 +1,3 @@
-require_relative '../../lib/assets/selective_assets_compressor'
-config.assets.js_compressor = SelectiveAssetsCompressor.new
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

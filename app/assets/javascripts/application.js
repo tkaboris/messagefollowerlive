@@ -18,4 +18,4 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 //= require turbolinks
-//= require_tree .
+//= require_tree

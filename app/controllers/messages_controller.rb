@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :find_message, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_speaker!, except: [:index, :show]
+  before_action :authenticate_listener!, only: [:show]
 
   def index
     @messages = Message.all.order("created_at DESC")

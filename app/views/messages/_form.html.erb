@@ -3,8 +3,9 @@
   <%= f.input :description, label: "Short Description" %>
 
 
-  <%= f.cktext_area :content, label: "Content Part" %>
 
+
+<%= f.cktext_area :content, label: "Description", :cols => 40, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
 
   <strong>Category:</strong>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>

@@ -9,9 +9,11 @@
         <div id="sectionA" class="tab-pane fade in active">
             <h3>Speakers</h3>
               <% @speakers.each do |speaker| %>
-              <p><%= link_to speaker.name, speaker_path(speaker) %></p>
+              <p><%= link_to speaker.name, speaker_path(speaker) %> <%= @listeners.count %> <%= speaker.organization %></p>
 
             <% end %>
+
+
 
         </div>
         <div id="sectionB" class="tab-pane fade">

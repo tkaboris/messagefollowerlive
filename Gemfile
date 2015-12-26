@@ -73,5 +73,5 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-
+  gem 'uglifier', '>= 1.3.0'
 end

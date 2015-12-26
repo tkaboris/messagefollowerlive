@@ -115,4 +115,6 @@ CKEDITOR.editorConfig = function( config )
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
     { name: 'tools',  items : [ 'Maximize', 'ShowBlocks','-','About' ] }
   ];
+  config.toolbar = 'mini';
+  return true;
 };

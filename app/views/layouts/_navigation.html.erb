@@ -1,0 +1,92 @@
+<nav class = "navbar navbar-default" role = "navigation">
+  <div class="container">
+   <div class = "navbar-header">
+      <% if speaker_signed_in? %>
+          <%= link_to "Message Follower", messages_path, class: "navbar-brand" %>
+          <% else %>
+          <%= link_to "Message Follower", root_path, class: "navbar-brand" %>
+      <% end %>
+   </div>
+   <div>
+      <ul class = "nav navbar-nav">
+        <li>
+         <% if speaker_signed_in? %>
+            <%= link_to "New Message", new_message_path %>
+          <% end %>
+        </li>
+        <li class="dropdown">
+          <%= link_to '#', class: "dropdown-toggle", "data-toggle" => "dropdown" do %>
+          Category <b class="caret"></b>
+          <% end %>
+            <ul class="dropdown-menu">
+            <% Category.all.each do |category| %>
+              <li> <%= link_to category.name, category_path(category) %></li>
+            <% end %>
+            <% if speaker_signed_in? %>
+              <li class="divider"></li>
+              <li>
+                <%= link_to(new_category_path) do %>
+                  New Category
+                <% end %>
+              </li>
+
+            <% end %>
+        </ul>
+        </li>
+          </ul>
+           <ul class="nav navbar-nav navbar-right">
+             <li class = "dropdown" >
+                <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
+                   Speaker<b class = "caret"></b></a>
+
+                <ul class="dropdown-menu">
+                <% if speaker_signed_in? %>
+                <li class="round-image-50"><%= image_tag(current_speaker.avatar.url(:thumb)) %></li>
+                  <li><%= link_to "View Profile", speaker_path(current_speaker) %></li>
+                  <li><%= link_to "New Message", new_message_path %></li>
+                  <li><%= link_to "Edit Account", edit_speaker_registration_path %></li>
+                  <li><%= link_to "Sign out", destroy_speaker_session_path,  :method => :delete %></li>
+                <% else %>
+                  <li><%= link_to "Log In", new_speaker_session_path %></li>
+                  <li><%= link_to "Sign Up", new_speaker_registration_path %></li>
+                <% end %>
+              </ul>
+
+             </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+             <li class = "dropdown" >
+                <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
+                   Listener<b class = "caret"></b></a>
+
+                <ul class="dropdown-menu">
+
+                <% if listener_signed_in? %>
+                  <li class="round-image-50"><%= image_tag(current_listener.avatar.url(:thumb)) %></li>
+                  <li><%= link_to "Edit Account", edit_listener_registration_path %></li>
+                  <li><%= link_to "Sign out", destroy_listener_session_path,  :method => :delete %></li>
+                  <% else %>
+                  <li><%= link_to "Log In", new_listener_session_path %></li>
+                  <li><%= link_to "Sign Up", new_listener_registration_path %></li>
+                <% end %>
+
+              </ul>
+
+             </li>
+
+            </ul>
+   </div>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+

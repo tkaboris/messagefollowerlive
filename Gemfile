@@ -41,6 +41,7 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 gem "paperclip", "~> 4.3"
 gem 'activeadmin', github: 'activeadmin'
 gem 'ckeditor'
+gem 'will_paginate', '3.0.7'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

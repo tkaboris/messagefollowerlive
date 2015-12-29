@@ -8,7 +8,7 @@ class PagesController < ApplicationController
 
     @listeners = Listener.all
   end
-  def index
+  def about
 
   end
 

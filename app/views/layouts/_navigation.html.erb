@@ -9,6 +9,7 @@
    </div>
    <div>
       <ul class = "nav navbar-nav">
+        <li><%= link_to "About", about_path %></li>
         <li>
          <% if speaker_signed_in? %>
             <%= link_to "New Message", new_message_path %>
@@ -20,7 +21,7 @@
           <% end %>
             <ul class="dropdown-menu">
             <% Category.all.each do |category| %>
-              <li> <%= link_to category.name, category_path(category) %></li>
+              <li> <%= link_to "category.name", category_path(category) %></li>
             <% end %>
             <% if speaker_signed_in? %>
               <li class="divider"></li>

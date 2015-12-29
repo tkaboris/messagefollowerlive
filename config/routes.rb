@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:new, :create, :show]
 
   root 'pages#home'
+  get '/about' => 'pages#about'
   get '/message/delete/:id' => "delete#message"
   get '/messagepart/delete/:id' => "delete#messagepart"
   # root 'messages#index'

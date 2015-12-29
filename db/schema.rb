@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219090656) do
+ActiveRecord::Schema.define(version: 20151229032441) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -166,6 +166,8 @@ ActiveRecord::Schema.define(version: 20151219090656) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "organization"
+    t.string   "speaker_type"
+    t.text     "speaker_bio"
   end
 
   add_index "speakers", ["email"], name: "index_speakers_on_email", unique: true

@@ -5,7 +5,7 @@
 
 
 
-<%= f.cktext_area :content, label: "Description", :cols => 40, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+<%= f.cktext_area :content, label: "Description", :cols => 40, :ckeditor => {:uiColor => '#cccccc'} %>
 
   <strong>Category:</strong>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>

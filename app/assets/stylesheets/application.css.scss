@@ -97,12 +97,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .message {
   box-sizing: border-box;
-  background-color: #383838;
+  background-color: #e9ece5;
   margin-bottom: 25px;
   margin-right: 10px;
   margin-left: 10px;
   padding: 1.4em 1.4em;
-  height: 150px;
+  height: 200px;
   border-bottom: 4px solid #0a8fd5;
 
   .message-title {
@@ -110,12 +110,73 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     margin-top: 0;
+    color: #1d2120;
+    margin-bottom: 25px;
+  }
+
+  .message-content {
+    font-size: 1em;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    margin-top: 25px;
+    color: #1d2120;
+    margin-bottom: 25px;
+  }
+
+  .message-categories {
+    font-size: 1em;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    margin-top: 25px;
     color: white;
     margin-bottom: 25px;
   }
 
-  .btn-custom {
-    margin-top: 20px;
+  .btn-default {
+    margin-bottom: 10px;
+  }
+
+}
+
+.speaker {
+  box-sizing: border-box;
+  background-color: #e9ece5;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 1.4em 1.4em;
+  height: 200px;
+  border-bottom: 4px solid #0a8fd5;
+
+  .speaker-name {
+    font-size: 2.5em;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+    color: #9068be;
+    margin-bottom: 25px;
+  }
+
+  .speaker-content {
+    font-size: 1em;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    margin-top: 25px;
+    color: #1d2120;
+    margin-bottom: 25px;
+  }
+
+  .speaker-categories {
+    font-size: 1em;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    margin-top: 25px;
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  .btn-default {
+    margin-bottom: 10px;
   }
 
 }
@@ -263,8 +324,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 25px;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     overflow: hidden;
     text-align: center;
     img { width: 100% }

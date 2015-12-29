@@ -1,7 +1,7 @@
 CKEDITOR.editorConfig = function(config) {
   //config.language = 'es'; //this could be any language
-  config.width = '725';
-  config.height = '600';
+  config.width = '650';
+  config.height = '500';
 
   // Filebrowser routes
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
@@ -21,16 +21,16 @@ CKEDITOR.editorConfig = function(config) {
 
 // You could delete or reorder any of this elements as you wish
   config.toolbar_Menu = [
-    { name: 'document', items: ['Source', '-', 'Save', 'NewPage', 'DocProps', 'Preview', 'Print', '-', 'Templates'] },
+    { name: 'document', items: ['Source', '-', 'Save'] },
     { name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'] },
-    { name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt'] },
-    { name: 'tools', items: ['Maximize', 'ShowBlocks', '-', 'About'] }, '/',
+    { name: 'editing', items: ['SelectAll', '-', 'SpellChecker', 'Scayt'] },
+    { name: 'tools', items: ['Maximize', 'ShowBlocks', '-'] }, '/',
     { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'] },
-    { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl'] },
+    { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
     { name: 'links', items: ['Link', 'Unlink', 'Anchor'] }, '/',
     { name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize'] },
     { name: 'colors', items: ['TextColor', 'BGColor'] },
-    { name: 'insert', items: ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'] }
+    { name: 'insert', items: ['Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'] }
   ];
   config.toolbar = 'Menu';
   return true;

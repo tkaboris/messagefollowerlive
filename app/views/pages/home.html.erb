@@ -14,9 +14,11 @@
               <h4 class="speaker-name"><%= link_to speaker.fullname, speaker_path(speaker) %> </h4>
               <h5 ><%= speaker.speaker_bio.truncate(150) %> </h5>
 
-              <span class="badge"><%= @listeners.count %>&nbsp;Subscribers</span>
 
-              <span class="badge"><%= @speakers.count %>&nbsp;Messages</span>
+
+              <span class="badge"><%= speaker.listeners_speakers.count %>&nbsp;Subscribers</span>
+
+              <span class="badge"><%= speaker.messages.count %>&nbsp;Messages</span>
               <span class="label label-info"><%= speaker.organization %></span>
                 </div>
             </div>

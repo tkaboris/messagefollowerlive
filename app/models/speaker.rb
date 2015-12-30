@@ -15,5 +15,4 @@ class Speaker < ActiveRecord::Base
   end
 
 
-
 end

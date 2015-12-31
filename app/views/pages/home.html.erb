@@ -11,8 +11,8 @@
               <% @speakers.each do |speaker| %>
               <div class="col-md-4">
                 <div class="speaker">
-              <h4 class="speaker-name"><%= link_to speaker.name, speaker_path(speaker) %> </h4>
-              <h5 ><%= raw speaker.speaker_bio.truncate(150) %> </h5>
+              <h4 class="speaker-name"><%= link_to speaker.fullname, speaker_path(speaker) %> </h4>
+              <h5 ><%= truncate(speaker.speaker_bio, :length => 100, :seperator => ' ') %> </h5>
 
 
 

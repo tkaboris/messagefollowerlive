@@ -1,6 +1,6 @@
 class Speaker < ActiveRecord::Base
-  has_many :messages
-  has_many :messageparts
+  has_many :messages, :dependent => :destroy
+  has_many :messageparts, :dependent => :destroy
   has_many :listeners_speakers,  class_name: 'ListenersSpeakers'
   has_many :listeners, through: :listeners_speakers
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"

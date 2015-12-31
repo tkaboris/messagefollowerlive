@@ -7,6 +7,8 @@ ActiveAdmin.register Speaker do
   column :name
   column :Lastname
   column :Organization
+  column :Speaker_type
+  column :Speaker_bio
   actions
 end
 

@@ -1,16 +1,16 @@
 ActiveAdmin.register Speaker do
   permit_params :email, :password, :password_confirmation
 
-  index do
-  column :id
-  column :email
-  column :name
-  column :Lastname
-  column :Organization
-  column :Speaker_type
-  column :Speaker_bio
-  actions
-end
+#   index do
+#   column :id
+#   column :email
+#   column :name
+#   column :Lastname
+#   column :Organization
+#   column :Speaker_type
+#   column :Speaker_bio
+#   actions
+# end
 
 
 # See permitted parameters documentation:

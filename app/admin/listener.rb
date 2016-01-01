@@ -7,6 +7,7 @@ ActiveAdmin.register Listener do
   column :name
   column :Lastname
   column :Organization
+  actions
 end
 
 # See permitted parameters documentation:

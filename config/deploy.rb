@@ -1,14 +1,14 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'sermonfollowerlive'
+set :application, 'messagefollowerlive'
 set :repo_url, 'git@github.com:tkaboris/messagefollowerlive.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/rails/app/sermonfollowerlive'
+set :deploy_to, '/home/rails/app/messagefollowerlive'
 
 # Default tmp_dir directory is /var/www/tmp
 set :tmp_dir, "/home/rails/tmp"

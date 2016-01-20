@@ -11,7 +11,7 @@ set :repo_url, 'git@github.com:tkaboris/messagefollowerlive.git'
 set :deploy_to, '/home/rails/app/messagefollowerlive'
 
 # Default tmp_dir directory is /var/www/tmp
-set :tmp_dir, "/home/rails/tmp"
+set :tmp_dir, "/home/rails/app/messagefollowerlive/shared/tmp"
 
 # Default value for :scm is :git
 set :scm, :git

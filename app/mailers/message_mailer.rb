@@ -1,5 +1,5 @@
 class MessageMailer < ActionMailer::Base
-  default from: "support@sermonfollower.com"
+  default from: "meditate@messagefollower.com"
 
   def mail_message_to_listener(message, listener)
     @message = message

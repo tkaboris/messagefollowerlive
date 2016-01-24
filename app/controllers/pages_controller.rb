@@ -14,6 +14,10 @@ class PagesController < ApplicationController
 
   end
 
+  def thomas_manton
+
+  end
+
 
 end
 

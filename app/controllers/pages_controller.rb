@@ -17,6 +17,9 @@ class PagesController < ApplicationController
   def thomas_manton
 
   end
+  def thomas_watson
+
+  end
 
 
 end

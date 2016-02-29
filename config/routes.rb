@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/thomas_manton' => 'pages#thomas_manton'
   get '/thomas_watson' => 'pages#thomas_watson'
+  get '/william_bates' => 'pages#william_bates'
   get '/message/delete/:id' => "delete#message"
   get '/messagepart/delete/:id' => "delete#messagepart"
   # root 'messages#index'

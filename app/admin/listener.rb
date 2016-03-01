@@ -1,5 +1,5 @@
 ActiveAdmin.register Listener do
-  permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :time_zone, :recieve_message_at
 
   index do
   column :id

@@ -1,0 +1,4 @@
+<%= simple_form_for [notable, Note.new] do |f| %>
+  <%= f.text_area :content, label: "Message Title"  %>
+<%= f.button :submit, style: "margin-bottom: 80px" %>
+<% end %>

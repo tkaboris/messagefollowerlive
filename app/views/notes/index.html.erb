@@ -1,0 +1,8 @@
+<% @notes.each do |note| %>
+<%= note.content %>
+
+<% end %>
+
+<%= render partial: "notes/notes", locals: {notable: @message} %>
+<%= render partial: "notes/form", locals: {notable: @messagepart} %>
+

@@ -5,8 +5,8 @@
   </head>
   <body>
     <h3>Hi <%= @listener.name %>, </h3>
-    <p>You have received a message from <%= @message.speaker.organization %></p><br/>
-    <!-- <p><%= @messagepart.message.speaker.fullname %> has sent a message part to you.</p><br/> -->
+    <!-- <p>You have received a message from <%= @message.speaker.organization %></p><br/> -->
+    <p><%= @messagepart.message.speaker.fullname %> has sent a message part to you.</p><br/>
     <h3 style="color: #000;">Message Part title: </h3> <hr /><%= @messagepart.contentparttitle %>
     <p ><%= raw @messagepart.contentpart %></p><br />
   </body>

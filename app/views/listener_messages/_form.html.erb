@@ -1,0 +1,6 @@
+<form id="update_listener_message" action="<%= update_listener_message_url %>" method="post">
+  Note: <br>
+  <textarea name="note" form="update_listener_message" value="<%= @note_content %>"><%= @note_content %></textarea><br>
+  <input type="submit" value="Update Note">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+</form>

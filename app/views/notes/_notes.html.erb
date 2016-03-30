@@ -1,0 +1,14 @@
+<h3>Notes</h3>
+<% @notes.each do |note| %>
+
+	<div class="col-md-4">
+    <div class="message">
+      <h5 class="message-content"><%=  note.content %></h5>
+      <% link_url =  (note.notable_type == 'Message') ? edit_listener_message_url(note.notable) : edit_listener_message_listener_messagepart_url(note.notable.message, note.notable) 
+      	  link_text = ( (note.notable_type == 'Message') ? "View Message" : "View Message Part")
+      %>
+      <%= link_to link_text, link_url , class: "btn btn-default" %>
+    </div>
+
+  </div>
+<% end %>

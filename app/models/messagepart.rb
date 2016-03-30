@@ -1,6 +1,7 @@
 class Messagepart < ActiveRecord::Base
   belongs_to :message
   belongs_to :speaker
+  has_many :notes, as: :notable
   has_attached_file :image, styles: { large: "500x500", medium: "300x350#" }
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

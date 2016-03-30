@@ -1,0 +1,12 @@
+<div class="col-md-8 col-md-offset-2" >
+  <div class="message-show" data-no-turbolink >
+    <h2><%= @message.title %></h2>
+    <p class="message-posted-by">Posted by <%= @message.speaker.email %> <%= time_ago_in_words(@message.created_at) %> ago&nbsp; <%= render @message.categories %></p>
+    <p class="message-desc"><%= @message.description %></p>
+    <p class="message-desc"><%= raw @message.content %></p>
+    <p class="message-desc">Send at: <%= @message.send_at.strftime("%d/%m/%Y") %></p>
+    <p class="message-desc"><%= image_tag @message.attached_img, size: "100x100" if @message.image? %></p>
+  </div>
+  <%= render 'form' %>
+</div>
+

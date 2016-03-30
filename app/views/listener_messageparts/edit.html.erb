@@ -1,0 +1,13 @@
+<div class="comment">
+  <p class="comment-content"><%= @messagepart.contentparttitle %></p>
+  <p class="comment-content"><%= raw @messagepart.contentpart %></p>
+  <p class="comment-content">Send at: <%= @messagepart.send_at.strftime("%d/%m/%Y") rescue '' %></p>
+  <p class="comment-content"><%= image_tag @messagepart.attached_img, size: "100x100" if @messagepart.image? %></p>
+  <form id="update_listener_messagepart" action="<%= update_listener_messagepart_url %>" method="post">
+  Note: <br>
+  <textarea name="note" form="update_listener_messagepart"><%= @note_content %></textarea><br>
+  <input type="submit" value="Update Note">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+</form>
+</div>
+

@@ -3,6 +3,7 @@ class Message < ActiveRecord::Base
   has_many :message_categories
   has_many :categories, through: :message_categories
   has_many :messageparts, dependent: :destroy
+  has_many :notes, as: :notable
   has_attached_file :image, styles: { large: "500x500", medium: "300x350#" }
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

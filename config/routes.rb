@@ -21,6 +21,14 @@ Rails.application.routes.draw do
 
   resources :messages do
     resources :messageparts
+      resources :notes
+  end
+
+  resources :notes
+
+
+  resources :listener_messages do
+    resources :listener_messageparts
   end
 
   resources :categories, only: [:new, :create, :show]
@@ -32,6 +40,8 @@ Rails.application.routes.draw do
   get '/william_bates' => 'pages#william_bates'
   get '/message/delete/:id' => "delete#message"
   get '/messagepart/delete/:id' => "delete#messagepart"
+  post '/listener_message/:id' => "listener_messages#update", as: :update_listener_message
+  post '/listener_messagepart/:id' => "listener_messageparts#update", as: :update_listener_messagepart
   # root 'messages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

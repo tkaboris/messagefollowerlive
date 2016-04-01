@@ -2,7 +2,7 @@ CKEDITOR.editorConfig = function(config) {
   //config.language = 'es'; //this could be any language
   config.width = '650';
   config.height = '500';
-  config.baseHref = 'http://messagefollower.com/public/ckeditor_assets/attachments/:id/:filename';
+  config.baseHref = 'http://messagefollower.com/public/ckeditor_assets/pictures/:id/:filename';
 
 
 

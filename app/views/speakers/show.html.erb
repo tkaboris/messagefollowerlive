@@ -13,6 +13,7 @@
 
 
 
+
   <% @messages.each do |m| %>
   <h4><%= link_to m.title, message_path(m) %></h4>
 
@@ -20,3 +21,7 @@
   </p>
 </h2>
 <% end %>
+
+ <% @speaker.attachments.each do |attachment| %>
+  <%= link_to attachment.file_file_name, download_speakers_path(:attachment_id => attachment.id) %>
+ <% end %>

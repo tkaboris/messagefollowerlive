@@ -1,6 +1,6 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= simple_nested_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -17,7 +17,13 @@
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-
+    <% resource.attachments.build if resource.attachments.blank? %>
+    <%= f.fields_for :attachments do |task_form| %>
+      <%= task_form.object.file_file_name %>
+      <%= task_form.file_field :file %>
+      <%= task_form.link_to_remove "Remove this Attachment" %>
+    <% end %>
+    <p><%= f.link_to_add "Add a Attachment", :attachments %></p>
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>

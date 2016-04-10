@@ -7,7 +7,7 @@
     <h3>Hi <%= @listener.name %>, </h3>
     <p><h3>You have received a message from <%= @messagepart.message.speaker.organization %></p></h3><br/>
     <!-- <p><%= @messagepart.message.speaker.fullname %> has sent a message part to you.</p><br/> -->
-    <h3 style="color: #000;">Message Part title: </h3> <hr /><%= @messagepart.contentparttitle %>
+    <h3 style="color: #000;">Message Part title:  <hr /><%= @messagepart.contentparttitle %></h3>
     <p ><%= raw @messagepart.contentpart %></p><br />
   </body>
 

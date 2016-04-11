@@ -17,6 +17,7 @@
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
+    <hr>
     <% resource.attachments.build if resource.attachments.blank? %>
     <%= f.fields_for :attachments do |task_form| %>
       <%= task_form.object.file_file_name %>

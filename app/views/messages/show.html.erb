@@ -13,7 +13,7 @@
     <% end %>
     <% end %>
     <h3 class="reply-to-msg">Message Parts:</h3>
-    <%= render @message.messageparts %>
+    <%= render @message.messageparts.order(id: :asc) %>
     <!-- Add conditional so taht the edit and destory links only apear for th user how created -->
     <div class="links btn-group">
       <%= link_to "Back", messages_path, class: "btn btn-default" %><br>

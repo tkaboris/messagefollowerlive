@@ -2,7 +2,7 @@
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-
+<h3>Please select speaker you are subscribing to</h3>
   <div class="form-inputs">
 
     <%= f.association :speakers, as: :check_boxes, label_method: :fullname, value_method: :id %>

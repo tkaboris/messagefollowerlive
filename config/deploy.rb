@@ -19,6 +19,9 @@ set :scm, :git
 # Default value for :format is :pretty
 # set :format, :pretty
 
+
+
+
 # Default value for :log_level is :debug
 # set :log_level, :debug
 
@@ -31,6 +34,10 @@ set :linked_files, fetch(:linked_files, []).push('config/application.yml')
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets', 'public/system')
+
+#to save uploaded images
+#set :linked_dirs, %w(public/ckeditor_assets/pictures)
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/ckeditor_assets}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }

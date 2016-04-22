@@ -44,12 +44,12 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 #   end
 # after "deploy:finalize_update", "deploy:symlink_config"
 
-task :symlink_config do
-  on primary roles :app do
-    run "ln -nfs /home/rails/app/messagefollowerlive/shared/tmp #/home/rails/app/messagefollowerlive/current/tmp"
-  end
-end
-after "deploy:finalize_update", "deploy:symlink_config"
+# task :symlink_config do
+#   on primary roles :app do
+#     run "ln -nfs /home/rails/app/messagefollowerlive/shared/tmp #/home/rails/app/messagefollowerlive/current/tmp"
+#   end
+# end
+# after "deploy:finalize_update", "deploy:symlink_config"
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 

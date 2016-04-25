@@ -90,6 +90,6 @@ class Message < ActiveRecord::Base
 
   #to get the image path, used for image atachment in email.
   def get_image_path
-    Rails.root.join("public").to_s + image.url(:large).split('?').first
+    URI.join(ActionController::Base.asset_host, image.url(:large).split('?').first)
   end
 end

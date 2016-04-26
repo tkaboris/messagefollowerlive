@@ -33,15 +33,17 @@ set :pty, false
 set :linked_files, fetch(:linked_files, []).push('config/application.yml')
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets', 'public/system')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets', 'public/system')
 
 #to save uploaded images
 #set :linked_dirs, %w(public/ckeditor_assets/pictures)
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/ckeditor_assets}
 
-# task :symlink_config, roles: :app do
-#      run "ln -nfs /home/rails/app/messagefollowerlive/shared/tmp #/home/rails/app/messagefollowerlive/current/tmp"
-#   end
+task :symlink_config, roles: :app do
+ run "ln -nfs /home/rails/app/messagefollowerlive/shared/tmp #/home/rails/app/messagefollowerlive/current/tmp"
+ run "rm -rf #{release_path}/public/images && ln -nfs #{shared_path}/images #{release_path}/public/images"
+ run "rm -rf #{release_path}/public/system && ln -nfs #{shared_path}/system #{release_path}/public/system"
+end
 # after "deploy:finalize_update", "deploy:symlink_config"
 
 # task :symlink_config do

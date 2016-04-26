@@ -1,0 +1,14 @@
+ru:
+  hello: "how are you"
+
+  activerecord:
+    attributes:
+      message:
+        title: "Название"
+        content: "Содержание"
+        description: "Описание"
+        created_at: "Создано"
+        updated_at: "Изменена"
+        send_at: "Отослать"
+        image_file_name: "Название изображения"
+        image_updated_at: "Изображение изменено"

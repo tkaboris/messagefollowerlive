@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    attributes:
+      message:
+        title: "Title"
+        content: "Content"
+        description: "Description"
+        created_at: "Created_at"
+        updated_at: "Updated_at"
+        send_at: "Send_at"
+        image_file_name: "Image File Name"
+        image_updated_at: "Image Updated "
+
+

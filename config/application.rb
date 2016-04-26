@@ -23,6 +23,7 @@ module Sermonfollower
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
      I18n.available_locales = [:en, :ru]
+     config.i18n.default_locale = :ru # set default locale to Russian
 
   end
 end

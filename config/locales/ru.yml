@@ -3,12 +3,70 @@ ru:
 
   activerecord:
     attributes:
-      message:
-        title: "Название"
-        content: "Содержание"
-        description: "Описание"
-        created_at: "Создано"
-        updated_at: "Изменена"
-        send_at: "Отослать"
-        image_file_name: "Название изображения"
-        image_updated_at: "Изображение изменено"
+      speaker:
+       name: "Имя"
+  menu:
+    about: "О проэкте"
+    puritans: "Пуритане"
+    new_message: "Новое Проповедь"
+    category: "Категория"
+    new_category: "Добавить Категорию"
+    listener: "Слушатель"
+    speaker: "Проповедник"
+    listener_login: "Войти"
+    listener_signup: "Зарегистрироватся"
+    listener_signout: "Выйти"
+    listener_edit: "Редактировать"
+    speaker_login: "Войти"
+    speaker_signup: "Зарегистрироватся"
+    speaker_view: "Профайл"
+    speaker_new: "Новая Проповедь"
+    speaker_edit: "Редактировать Профайл"
+    speaker_signout: "Выйти"
+
+  forms:
+    messages:
+      success: "Операция была успешно выполнена!"
+    buttons:
+     edit: "Редактировать"
+     login: "Войти"
+
+
+     ##################################
+  # DEVISE
+  ##################################
+  devise:
+    sessions:
+      new:
+        title: "Вход"
+        sign_in_button: "Войти"
+    shared:
+      links:
+        forgot_password: "Забыли пароль?"
+        sign_up_link: "Зарегистрироваться!"
+        sign_in_link: "Уже зарегистрированы?"
+        didntreceive: "Вы не получили линк с конфирмацией?"
+    registrations:
+      edit:
+        header: "Редактирование личных данных"
+        update_button: "Обновить"
+        password_hint: "Оставьте это поле пустым, если вы не хотите менять пароль"
+        current_password_hint: "Для смены пароля вам необходимо указать текущий пароль"
+    passwords:
+      new:
+        send_pass_instructions_button: "Выслать инструкцию для восстановления пароля"
+        title: "Забыли ваш пароль?"
+
+  # log in page for listener
+  listener:
+    login_title: "Водите как слушатель или зарегестриуйтесь."
+    login_edit_title: "Редактировать ваш профайл."
+
+  messages:
+    index:
+      title: "Список Статей"
+    edit:
+      title: "Отредактировать Статью"
+    new:
+      title: "Добавить Статью"
+

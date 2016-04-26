@@ -24,14 +24,75 @@ en:
 
   activerecord:
     attributes:
-      message:
-        title: "Title"
-        content: "Content"
-        description: "Description"
-        created_at: "Created_at"
-        updated_at: "Updated_at"
-        send_at: "Send_at"
-        image_file_name: "Image File Name"
-        image_updated_at: "Image Updated "
+     speaker:
+      name: "Name"
+
+
+  menu:
+    about: "About"
+    puritans: "Puritans"
+    new_message: "New Message"
+    category: "Category"
+    new_category: "New Category"
+    listener: "Listener"
+    speaker: "Speaker"
+    listener_login: "Log In"
+    listener_signup: "Sign Up"
+    listener_signout: "Sign Out"
+    listener_edit: "Edit"
+    speaker_login: "Log In"
+    speaker_signup: "Sign Up"
+    speaker_view: "View Profile"
+    speaker_new: "New Message"
+    speaker_edit: "Edit Account"
+    speaker_signout: "Sign Out"
+
+  forms:
+    messages:
+      success: "Your messsage was sucessfully updated."
+    buttons:
+     edit: "Edit"
+     login: "Log In"
+
+
+   ##################################
+  # DEVISE
+  ##################################
+  devise:
+    sessions:
+      new:
+        title: "Sign in"
+        sign_in_button: "Sign in"
+    shared:
+      links:
+        forgot_password: "Forgot your password?"
+        sign_up_link: "Sign up"
+        didntreceive: "Didn't receive confirmation instructions?"
+    registrations:
+      edit:
+        header: "Edit settings"
+        update_button: "Update"
+        password_hint: "Leave it blank if you don't want to change it"
+        current_password_hint: "We need your current password to confirm your changes"
+    passwords:
+      new:
+        send_pass_instructions_button: "Send me reset password instructions"
+        title: "Forgot your password?"
+
+
+  # log in page for listener
+  listener:
+    login_title: "Log In as a listener or Sign Up."
+    login_edit_title: "Edit your profile."
+
+  messages:
+    index:
+      title: "List of Messages"
+    edit:
+      title: "Edit Message"
+    new:
+      title: "New Message"
+
+
 
 

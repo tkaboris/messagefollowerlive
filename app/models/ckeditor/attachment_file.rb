@@ -14,7 +14,7 @@ class Ckeditor::AttachmentFile < Ckeditor::Asset
 
   def url_content
     if Rails.env.production?
-        host_url="http://your_domen"
+        host_url="http://messagefollower.com"
      else
         host_url="http://localhost:3000"
      end

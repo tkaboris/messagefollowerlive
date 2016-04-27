@@ -9,16 +9,6 @@ class Ckeditor::Picture < Ckeditor::Asset
   validates_attachment_content_type :data, :content_type => /\Aimage/
 
   def url_content
-    host_url+url(:content)
+    url(:content)
   end
-
-  def host_url
-    if Rails.env.production?
-      "http://your_domen"
-    else
-      "http://localhost:3000"
-    end
-    
-  end
-
 end

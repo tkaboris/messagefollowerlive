@@ -1,6 +1,6 @@
 class Ckeditor::AttachmentFile < Ckeditor::Asset
   has_attached_file :data,
-                    :url => "/ckeditor_assets/pictures/:id/:filename",
+                    :url => "#{host_url}/ckeditor_assets/pictures/:id/:filename",
                     :path => ":rails_root/public/ckeditor_assets/pictures/:id/:filename"
                     # before was attachements instead of pictures
 
@@ -12,12 +12,12 @@ class Ckeditor::AttachmentFile < Ckeditor::Asset
     @url_thumb ||= Ckeditor::Utils.filethumb(filename)
   end
 
-  def url_content
+  def host_url
     if Rails.env.production?
-        host_url="http://messagefollower.com"
-     else
-        host_url="http://localhost:3000"
-     end
-    host_url+url
+      "http://your_domen"
+    else
+      "http://localhost:3000"
+    end
   end
+
 end

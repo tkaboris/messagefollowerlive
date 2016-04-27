@@ -11,4 +11,13 @@ class Ckeditor::AttachmentFile < Ckeditor::Asset
   def url_thumb
     @url_thumb ||= Ckeditor::Utils.filethumb(filename)
   end
+
+  def url_content
+    if Rails.env.production?
+        host_url="http://your_domen"
+     else
+        host_url="http://localhost:3000"
+     end
+    host_url+url
+  end
 end

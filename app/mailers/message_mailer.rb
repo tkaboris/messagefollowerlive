@@ -23,3 +23,4 @@ class MessageMailer < ActionMailer::Base
     mail(to: @listener.email, subject: "#{part_number.ordinalize} part of #{message_title}, Part #{part_number+1}")
   end
 end
+# MessageMailer.mail_message_to_listener(Message.first, Listener.first)

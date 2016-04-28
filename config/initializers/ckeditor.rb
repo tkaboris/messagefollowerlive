@@ -27,7 +27,7 @@ Ckeditor.setup do |config|
   # Paginate assets
   # By default: 24
   # config.default_per_page = 24
-  config.cdn_url = "https://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"
+  config.cdn_url = "//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"
   # Customize ckeditor assets path
   # By default: nil
   config.asset_path = "/assets/ckeditor/"

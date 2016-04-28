@@ -40,7 +40,7 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 # Easy file attachment management for ActiveRecord
 gem "paperclip", "~> 4.3"
 gem 'activeadmin', github: 'activeadmin'
-gem 'ckeditor'
+gem 'ckeditor', '4.1.6'
 gem 'will_paginate', '3.0.7'
 
 # Use ActiveModel has_secure_password

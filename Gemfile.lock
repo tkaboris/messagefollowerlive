@@ -307,7 +307,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-sidekiq
   capistrano3-puma
-  ckeditor
+  ckeditor (= 4.1.6)
   coffee-rails (~> 4.1.0)
   datetimepicker-rails!
   devise (~> 3.5, >= 3.5.6)

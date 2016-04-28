@@ -80,10 +80,18 @@ en:
         title: "Forgot your password?"
 
 
-  # log in page for listener
+  # log in and Sign up page for listener
   listener:
     login_title: "Log In as a listener or Sign Up."
     login_edit_title: "Edit your profile."
+    sign_up: "Sign Up as a listener."
+    choose_speaker: "Please select speaker you are subscribing to"
+
+  #log in as speaker
+  speaker:
+    login_title: "Log In as a speaker or Sign Up."
+    login_edit_title: "Edit your profile."
+    sign_up: "Sign Up as a speaker."
 
   messages:
     index:

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
 
   devise_for :speakers, :controllers => { :registrations => "speaker_registrations" }
+  # devise_for :speakers
   resources :speakers, only: [:show] do
     member do
       get 'subscribe'

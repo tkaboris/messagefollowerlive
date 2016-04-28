@@ -9,6 +9,11 @@ class Ckeditor::Picture < Ckeditor::Asset
   validates_attachment_content_type :data, :content_type => /\Aimage/
 
   def url_content
-    url(:content)
+    if Rails.env.production?
+      host_url="http://messagefollower.com"
+    else
+      host_url="http://localhost:3000"
+    end
+    host_url+url(:content)
   end
 end

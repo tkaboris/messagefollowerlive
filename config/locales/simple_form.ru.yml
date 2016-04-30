@@ -13,6 +13,11 @@ ru:
           password_confirmation: "Подтверждение нового пароля"
           current_password: "Ваш текущий пароль"
 
+      message:
+        new:
+          title: 'Название'
+          description: 'Description'
+
       speaker:
         new:
           email: "Ваш email"
@@ -24,5 +29,9 @@ ru:
           password: "Новый пароль"
           password_confirmation: "Подтверждение нового пароля"
           current_password: "Ваш текущий пароль"
+
+      message:
+        input:
+          label: "Название проповеди"
 
 

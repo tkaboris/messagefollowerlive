@@ -24,8 +24,9 @@ en:
 
   activerecord:
     attributes:
-     speaker:
-      name: "Name"
+     message:
+       title: "Название"
+       body: "Текст"
 
 
   menu:
@@ -94,13 +95,13 @@ en:
     sign_up: "Sign Up as a speaker."
 
   messages:
-    index:
-      title: "List of Messages"
-    edit:
-      title: "Edit Message"
-    new:
-      title: "New Message"
+    index_title: "List of Messages"
+    edit_title: "Edit Message"
+    new_title: "New Message"
 
+  #add new message
+  message:
+    new_label: "Message Title"
 
 
 

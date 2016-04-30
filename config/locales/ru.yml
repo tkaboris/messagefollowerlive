@@ -3,8 +3,9 @@ ru:
 
   activerecord:
     attributes:
-      speaker:
-       name: "Имя"
+     message:
+       title: "Название"
+       body: "Текст"
   menu:
     about: "О проэкте"
     puritans: "Пуритане"
@@ -71,10 +72,10 @@ ru:
     sign_up: "Зарегестрироватся как проповедник"
 
   messages:
-    index:
-      title: "Список Статей"
-    edit:
-      title: "Отредактировать Статью"
-    new:
-      title: "Добавить Статью"
+    index_title: "Список Проповедей"
+    edit_title: "Отредактировать Проповедь"
+    new_title: "Добавить Проповедь"
+#add new message
+  message:
+    new_label: "Название проповеди"
 

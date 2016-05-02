@@ -1,11 +1,32 @@
 ru:
   hello: "how are you"
 
+  helpers:
+    submit:
+      message:
+        create: "Создать Проповедь"
+        update: "Сохранить Изменения"
+      speaker:
+        create: "Зарегистрироватся"
+        update: "Обновить Профайл"
+      listener:
+        create: "Зарегистрироватся"
+        update: "Обновить Профайл"
+
   activerecord:
     attributes:
-     message:
+      message:
        title: "Название"
-       body: "Текст"
+       description: "Краткое Описание"
+       image: "Добавить Изображение"
+       submit: "Создать Проповедь"
+      speaker:
+        organization: "Название Церкви"
+        name: "Имя"
+        lastname: "Фамилия"
+        speaker_type: "Проповедник ?"
+        speaker_bio: "О Проповеднике"
+
   menu:
     about: "О проэкте"
     puritans: "Пуритане"
@@ -24,6 +45,11 @@ ru:
     speaker_new: "Новая Проповедь"
     speaker_edit: "Редактировать Профайл"
     speaker_signout: "Выйти"
+    change_language: "Язык"
+    languages:
+    lang: "Язык"
+    ru: "Русский"
+    en: "Английский"
 
   forms:
     messages:
@@ -31,6 +57,12 @@ ru:
     buttons:
      edit: "Редактировать"
      login: "Войти"
+     submit: "Создать Проповедь"
+
+  attachments:
+    speaker_edit:
+      remove: "Удалить Файл"
+      add: "Загрузить Файл"
 
 
      ##################################
@@ -47,6 +79,7 @@ ru:
         sign_up_link: "Зарегистрироваться!"
         sign_in_link: "Уже зарегистрированы?"
         didntreceive: "Вы не получили линк с конфирмацией?"
+        login: "Войти"
     registrations:
       edit:
         header: "Редактирование личных данных"
@@ -75,6 +108,8 @@ ru:
     index_title: "Список Проповедей"
     edit_title: "Отредактировать Проповедь"
     new_title: "Добавить Проповедь"
+    category: "Категория: ?"
+    delete_image: "Убрать Изображение"
 #add new message
   message:
     new_label: "Название проповеди"

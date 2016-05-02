@@ -8,15 +8,15 @@
     <%= f.input :organization, required: true %>
     <%= f.input :name, required: true, autofocus: true %>
     <%= f.input :lastname, required: true, autofocus: true %>
-    <%= f.input :speaker_type, :label => "Speaker Type", :collection => ["Pastor","Associate","Group_Leader","Music","Other"] %>
-    <%= f.input :speaker_bio, :label => "Speaker Bio", as: :text  %>
+    <%= f.input :speaker_type, :collection => ["Pastor","Associate","Group_Leader","Music","Other"] %>
+    <%= f.input :speaker_bio,  as: :text  %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit %>
   </div>
 <% end %>
 

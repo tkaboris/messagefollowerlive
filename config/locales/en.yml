@@ -21,12 +21,33 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    submit:
+      message:
+        create: "Create Message"
+        update: "Save Changes"
+      speaker:
+        create: "Sign Up"
+        update: "Save Changes"
+      listener:
+        create: "Sign Up"
+        update: "Save Changes"
 
   activerecord:
     attributes:
-     message:
-       title: "Название"
-       body: "Текст"
+      message:
+       title: "Title"
+       description: "Description"
+       image: "Attach Image"
+       submit: "Create Message"
+      speaker:
+        organization: "Organization Name"
+        name: "Name"
+        lastname: "Last Name"
+        speaker_type: "Speaker Type"
+        speaker_bio: "Speaker Bio"
+
+
 
 
   menu:
@@ -47,6 +68,11 @@ en:
     speaker_new: "New Message"
     speaker_edit: "Edit Account"
     speaker_signout: "Sign Out"
+    change_language: "Language"
+    languages:
+    lang: "Language"
+    ru: "Russian"
+    en: "English"
 
   forms:
     messages:
@@ -54,6 +80,13 @@ en:
     buttons:
      edit: "Edit"
      login: "Log In"
+     submit: "Create Message"
+
+  attachments:
+    speaker_edit:
+      remove: "Remove Attachment"
+      add: "Add Attachment"
+
 
 
    ##################################
@@ -98,6 +131,8 @@ en:
     index_title: "List of Messages"
     edit_title: "Edit Message"
     new_title: "New Message"
+    category: "Category: ?"
+    delete_image: "Delete Image"
 
   #add new message
   message:

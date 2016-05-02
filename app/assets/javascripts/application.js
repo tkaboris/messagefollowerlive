@@ -18,4 +18,6 @@
 //= require pickers
 //= require turbolinks
 //= require jquery_nested_form
+//= require ckeditor/init
+//= require_tree ./ckeditor
 //= require_tree .

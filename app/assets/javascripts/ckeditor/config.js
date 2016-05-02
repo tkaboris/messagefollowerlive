@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = function(config) {
   //config.language = 'es'; //this could be any language
-  config.width = '720';
+  config.width = '680';
   config.height = '500';
 
 
@@ -20,10 +20,13 @@ CKEDITOR.editorConfig = function(config) {
   // The location of a script that handles file uploads.
   config.filebrowserUploadUrl = "/ckeditor/attachment_files";
 
+  config.allowedContent = true;
+  config.fontSize_defaultLabel = '16px';
 
 
 // You could delete or reorder any of this elements as you wish
   config.toolbar_Menu = [
+
     { name: 'document', items: ['Source', '-', 'Save'] },
     { name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'] },
     { name: 'editing', items: ['SelectAll', '-', 'SpellChecker', 'Scayt'] },

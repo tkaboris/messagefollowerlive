@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = function(config) {
   //config.language = 'es'; //this could be any language
-  config.width = '680';
+  config.width = '650';
   config.height = '500';
 
 

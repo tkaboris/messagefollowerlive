@@ -1,7 +1,7 @@
 ru:
   hello: "how are you"
 
-<<<<<<< HEAD
+
   activerecord:
     attributes:
       message:
@@ -13,7 +13,7 @@ ru:
         send_at: "Отослать"
         image_file_name: "Название изображения"
         image_updated_at: "Изображение изменено"
-=======
+
   helpers:
     submit:
       message:
@@ -146,4 +146,4 @@ ru:
   message:
     new_label: "Название проповеди"
 
->>>>>>> russian
+

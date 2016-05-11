@@ -10,15 +10,8 @@ Rails.application.routes.draw do
   mount Sidekiq::Web, at: "/sidekiq"
 
   devise_for :listeners, :controllers => { :registrations => "registrations" }
-
-
-<<<<<<< HEAD
-  devise_for :speakers, :controllers => { :registrations => "speaker_registrations" }
-  # devise_for :speakers
-=======
-   # devise_for :speakers, :controllers => { :registrations => "speaker_registrations" }
+ # devise_for :speakers, :controllers => { :registrations => "speaker_registrations" }
   devise_for :speakers
->>>>>>> russian
   resources :speakers, only: [:show] do
     member do
       get 'subscribe'

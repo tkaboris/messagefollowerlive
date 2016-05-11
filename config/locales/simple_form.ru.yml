@@ -7,17 +7,12 @@ ru:
           password: "Пароль"
           remember_me: "Запомнить меня"
           password_confirmation: "Подтверждение пароля"
-<<<<<<< HEAD
-=======
 
->>>>>>> russian
         edit:
           email: "Ваш email"
           password: "Новый пароль"
           password_confirmation: "Подтверждение нового пароля"
           current_password: "Ваш текущий пароль"
-<<<<<<< HEAD
-=======
 
 
 
@@ -33,8 +28,3 @@ ru:
           password: "Новый пароль"
           password_confirmation: "Подтверждение нового пароля"
           current_password: "Ваш текущий пароль"
-
-
-
-
->>>>>>> russian

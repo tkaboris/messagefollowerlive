@@ -1,13 +1,13 @@
 <div class="container">
 
 <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#sectionA">All Speakers</a></li>
-        <li><a data-toggle="tab" href="#sectionB">All Messages</a></li>
+        <li class="active"><a data-toggle="tab" href="#sectionA"><%= t('speaker.all_speakers') %></a></li>
+        <li><a data-toggle="tab" href="#sectionB"><%= t('speaker.all_messages') %></a></li>
 
 </ul>
     <div class="tab-content">
         <div id="sectionA" class="tab-pane fade in active">
-            <h3>Speakers</h3>
+            <h3><%= t('speaker.speakers') %></h3>
               <% @speakers.each do |speaker| %>
               <div class="col-md-4">
                 <div class="speaker">
@@ -16,10 +16,10 @@
 
 
 
-              <span class="badge"><%= speaker.listeners_speakers.count %>&nbsp;Subscribers</span>
+              <span class="badge"><%= speaker.listeners_speakers.count %>&nbsp;<%= t('subscribers.subscribers') %></span>
 
 
-              <span class="badge"><%= speaker.messages.count %>&nbsp;Messages</span>
+              <span class="badge"><%= speaker.messages.count %>&nbsp;<%= t('speaker.messages') %></span>
               <span class="label label-info"><%= speaker.organization %></span>
                 </div>
             </div>

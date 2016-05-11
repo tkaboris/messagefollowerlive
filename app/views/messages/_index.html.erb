@@ -4,7 +4,7 @@
     <div class="message">
       <h2 class="message-title"> <%= message.title %> </h2>
       <h5 class="message-content"><%=  message.description %></h5>
-      <%= link_to "View Message", message_path(message), class: "btn btn-default" %>
+      <%= link_to t("messages.view_message"), message_path(message), class: "btn btn-default" %>
       <h5 class="message-categories"><%= render message.categories %></h5>
     </div>
 

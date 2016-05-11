@@ -21,3 +21,149 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    submit:
+      message:
+        create: "Create Message"
+        update: "Save Changes"
+      speaker:
+        create: "Sign Up"
+        update: "Save Changes"
+      listener:
+        create: "Sign Up"
+        update: "Save Changes"
+
+  activerecord:
+    attributes:
+      message:
+       title: "Title"
+       description: "Description"
+       image: "Attach Image"
+       submit: "Create Message"
+      speaker:
+        organization: "Organization Name"
+        name: "Name"
+        lastname: "Last Name"
+        speaker_type: "Speaker Type"
+        speaker_bio: "Speaker Bio"
+      listener:
+        name: "Name"
+        lastname: "Last Name"
+    errors:
+      models:
+        listener:
+          attributes:
+            password:
+              confirmation: "Password does not match"
+              too_short: "Password is too short"
+
+
+
+
+  menu:
+    about: "About"
+    puritans: "Puritans"
+    new_message: "New Message"
+    category: "Category"
+    new_category: "New Category"
+    listener: "Listener"
+    speaker: "Speaker"
+    listener_login: "Log In"
+    listener_signup: "Sign Up"
+    listener_signout: "Sign Out"
+    listener_edit: "Edit"
+    speaker_login: "Log In"
+    speaker_signup: "Sign Up"
+    speaker_view: "View Profile"
+    speaker_new: "New Message"
+    speaker_edit: "Edit Account"
+    speaker_signout: "Sign Out"
+    change_language: "Language"
+    languages:
+    lang: "Language"
+    ru: "Russian"
+    en: "English"
+
+  forms:
+    messages:
+      success: "Your messsage was sucessfully updated."
+    buttons:
+     edit: "Edit"
+     login: "Log In"
+     submit: "Create Message"
+
+  attachments:
+    speaker_edit:
+      remove: "Remove Attachment"
+      add: "Add Attachment"
+
+
+
+   ##################################
+  # DEVISE
+  ##################################
+  devise:
+    sessions:
+      new:
+        title: "Sign in"
+        sign_in_button: "Sign in"
+    shared:
+      links:
+        forgot_password: "Forgot your password?"
+        sign_up_link: "Sign up"
+        didntreceive: "Didn't receive confirmation instructions?"
+    registrations:
+      edit:
+        header: "Edit settings"
+        update_button: "Update"
+        password_hint: "Leave it blank if you don't want to change it"
+        current_password_hint: "We need your current password to confirm your changes"
+    passwords:
+      new:
+        send_pass_instructions_button: "Send me reset password instructions"
+        title: "Forgot your password?"
+
+
+  # log in and Sign up page for listener
+  listener:
+    login_title: "Log In as a listener or Sign Up."
+    login_edit_title: "Edit your profile."
+    sign_up: "Sign Up as a listener."
+    choose_speaker: "Please select speaker you are subscribing to"
+    choose_time: "What Time Zone?"
+    choose_hour: "What Hour To Receive Messages"
+    characters_minimum: "characters minimum"
+
+  #log in as speaker
+  speaker:
+    login_title: "Log In as a speaker or Sign Up."
+    login_edit_title: "Edit your profile."
+    sign_up: "Sign Up as a speaker."
+    speakers: "Speakers"
+    all_speakers: "All Speakers"
+    all_messages: "All Messages"
+    messages: "Messages"
+
+
+  messages:
+    index_title: "List of Messages"
+    edit_title: "Edit Message"
+    new_title: "New Message"
+    category: "Category: ?"
+    delete_image: "Delete Image"
+    view_message: "View Message"
+
+  subscribers:
+    subscribers: "Listeners"
+  mailer:
+    hi: "Hi"
+    you_received_message: "You have received a message from"
+    message_part_title: "Message Part Title:"
+    description: "Description"
+
+  #add new message
+  message:
+    new_label: "Message Title"
+
+
+

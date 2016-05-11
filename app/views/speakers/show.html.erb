@@ -8,20 +8,32 @@
 
 
  <h2><%= @speaker.name %><%= @speaker.lastname %>
-  <%= link_to "Subscribe to this Speaker", subscribe_speaker_path(@speaker), class: "btn btn-default btn-xs" %>
-  <p>
+  <%= link_to "Subscribe to this Speaker", subscribe_speaker_path(@speaker), class: "btn btn-default btn-xs" %></h2>
+
+<div class = "table-responsive">
+   <table class = "table">
+      <caption>Current Speaker's Files</caption>
+      <% @speaker.attachments.each do |attachment| %>
+      <tbody>
+         <tr>
+            <td>
+  <%= link_to attachment.file_file_name %>
+ </td>
+            <td> <%= link_to "Download", download_speakers_path(:attachment_id => attachment.id) %></td>
+         </tr>
+      </tbody>
+<% end %>
+   </table>
+</div>
 
 
 
-
-  <% @messages.each do |m| %>
+<p> <% @messages.each do |m| %>
   <h4><%= link_to m.title, message_path(m) %></h4>
+</p>
 
-
-  </p>
-</h2>
 <% end %>
 
- <% @speaker.attachments.each do |attachment| %>
-  <%= link_to attachment.file_file_name, download_speakers_path(:attachment_id => attachment.id) %>
- <% end %>
+
+
+

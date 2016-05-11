@@ -1,16 +1,27 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2><%= t('speaker.login_edit_title') %></h2>
 
 <%= simple_nested_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
+  <table class="table table-bordered">
+      <% resource.attachments.build if resource.attachments.blank? %>
+        <%= f.fields_for :attachments do |task_form| %>
+          <%= task_form.object.file_file_name %>
+          <%= task_form.file_field :file %>
+          <%= task_form.link_to_remove t("attachments.speaker_edit.remove") %>
+      <% end %>
+      <p><%= f.link_to_add t("attachments.speaker_edit.add"), :attachments %></p>
+  </table>
+  <hr>
 
     <%= f.file_field :avatar %>
+    <hr>
     <%= f.input :organization %>
     <%= f.input :name, required: true, autofocus: true %>
     <%= f.input :lastname, required: true, autofocus: true %>
-    <%= f.input :speaker_type, :label => "Speaker Type", :collection => ["Pastor","Associate","Group_Leader","Music","Other"] %>
-    <%= f.input :speaker_bio, :label => "Speaker Bio", as: :text  %>
+    <%= f.input :speaker_type,  :collection => ["Pastor","Associate","Group_Leader","Music","Other"] %>
+    <%= f.input :speaker_bio,  as: :text  %>
     <%= f.input :email, required: true, autofocus: true %>
 
 
@@ -18,25 +29,19 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
     <hr>
-    <% resource.attachments.build if resource.attachments.blank? %>
-    <%= f.fields_for :attachments do |task_form| %>
-      <%= task_form.object.file_file_name %>
-      <%= task_form.file_field :file %>
-      <%= task_form.link_to_remove "Remove this Attachment" %>
-    <% end %>
-    <p><%= f.link_to_add "Add a Attachment", :attachments %></p>
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+
+    <%= f.input :password, autocomplete: "off", hint: t("devise.registrations.edit.password_hint"), required: false  %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :current_password, hint: t("devise.registrations.edit.current_password_hint"), required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<!-- <h3>Cancel my account</h3>
 
-<p>Are You Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Are You Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
 
 <%= link_to "Back", :back %>

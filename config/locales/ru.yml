@@ -1,6 +1,7 @@
 ru:
   hello: "how are you"
 
+<<<<<<< HEAD
   activerecord:
     attributes:
       message:
@@ -12,3 +13,137 @@ ru:
         send_at: "Отослать"
         image_file_name: "Название изображения"
         image_updated_at: "Изображение изменено"
+=======
+  helpers:
+    submit:
+      message:
+        create: "Создать Проповедь"
+        update: "Сохранить Изменения"
+      speaker:
+        create: "Зарегистрироватся"
+        update: "Обновить Профайл"
+      listener:
+        create: "Зарегистрироватся"
+        update: "Обновить Профайл"
+
+  activerecord:
+    attributes:
+      message:
+       title: "Название"
+       description: "Краткое Описание"
+       image: "Добавить Изображение"
+       submit: "Создать Проповедь"
+      speaker:
+        organization: "Название Церкви"
+        name: "Имя"
+        lastname: "Фамилия"
+        speaker_type: "Проповедник ?"
+        speaker_bio: "О Проповеднике"
+      listener:
+        name: "Имя"
+        lastname: "Фамилия"
+
+  menu:
+    about: "О проэкте"
+    puritans: "Пуритане"
+    new_message: "Добавить Проповедь"
+    category: "Категория"
+    new_category: "Добавить Категорию"
+    listener: "Слушатель"
+    speaker: "Проповедник"
+    listener_login: "Войти"
+    listener_signup: "Зарегистрироватся"
+    listener_signout: "Выйти"
+    listener_edit: "Редактировать"
+    speaker_login: "Войти"
+    speaker_signup: "Зарегистрироватся"
+    speaker_view: "Профайл"
+    speaker_new: "Новая Проповедь"
+    speaker_edit: "Редактировать Профайл"
+    speaker_signout: "Выйти"
+    change_language: "Язык"
+    languages:
+    lang: "Язык"
+    ru: "Русский"
+    en: "Английский"
+
+  forms:
+    messages:
+      success: "Операция была успешно выполнена!"
+    buttons:
+     edit: "Редактировать"
+     login: "Войти"
+     submit: "Создать Проповедь"
+
+  attachments:
+    speaker_edit:
+      remove: "Удалить Файл"
+      add: "Загрузить Файл"
+
+
+     ##################################
+  # DEVISE
+  ##################################
+  devise:
+    sessions:
+      new:
+        title: "Вход"
+        sign_in_button: "Войти"
+    shared:
+      links:
+        forgot_password: "Забыли пароль?"
+        sign_up_link: "Зарегистрироваться!"
+        sign_in_link: "Уже зарегистрированы?"
+        didntreceive: "Вы не получили линк с конфирмацией?"
+        login: "Войти"
+    registrations:
+      edit:
+        header: "Редактирование личных данных"
+        update_button: "Обновить"
+        password_hint: "Оставьте это поле пустым, если вы не хотите менять пароль"
+        current_password_hint: "Для смены пароля вам необходимо указать текущий пароль"
+    passwords:
+      new:
+        send_pass_instructions_button: "Выслать инструкцию для восстановления пароля"
+        title: "Забыли ваш пароль?"
+
+  # log in page for listener
+  listener:
+    login_title: "Водите как слушатель или зарегестриуйтесь."
+    login_edit_title: "Редактировать ваш профайл."
+    sign_up: "Зарегестрируйтесь как слушатель"
+    choose_speaker: "Пожалуйста выберите проповедника"
+    choose_time: "Часовая Зона?"
+    choose_hour: "В Какой Час Получать Проповедь?"
+    characters_minimum: " минимальное количество символов"
+
+  #log in as speaker
+  speaker:
+    login_title: "Войдите как проповедник или зарегистрируйтесь"
+    login_edit_title: "Отредактировать ваш профайл"
+    sign_up: "Зарегестрироватся как проповедник"
+    speakers: "Проповедники"
+    all_speakers: "Все Проповедники"
+    all_messages: "Все Проповеди"
+    messages: "Проповеди"
+
+  messages:
+    index_title: "Список Проповедей"
+    edit_title: "Отредактировать Проповедь"
+    new_title: "Добавить Проповедь"
+    category: "Категория: ?"
+    delete_image: "Убрать Изображение"
+    view_message: "Просмотреть"
+
+  subscribers:
+    subscribers: "Слушателей"
+  mailer:
+    hi: "Уважаемый"
+    you_received_message: "вам пришла новая проповедь от"
+    message_part_title: "Название части проповеди:"
+    description: "Описание"
+
+  message:
+    new_label: "Название проповеди"
+
+>>>>>>> russian

@@ -1,21 +1,22 @@
 <%= simple_form_for @message, html: { multipart: true }  do |f| %>
-  <%= f.input :title, label: "Message Title"  %>
-  <%= f.input :description, label: "Short Description" %>
+
+  <%= f.input :title %>
+  <%= f.input :description %>
 
 
 
 
 <%= f.cktext_area :content, label: "Description", :cols => 40, :ckeditor => {:uiColor => '#cccccc'} %>
 
-  <strong>Category:</strong>
+  <strong><%= t('messages.category') %></strong>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
     <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
     <% end %>
   <%= f.input :send_at, :as => :date_picker, input_html: { data: {date_options: { defaultDate: @message.default_date, minDate: @message.default_date }}} %>
 
-  <%= f.input :image, label: "Attach image" %>
+  <%= f.input :image %>
   <i class="glyphicon glyphicon-camera glyphicon-2x" id="msg_camera_icon"></i>
   <%= image_tag @message.attached_img, size: "100x100", id: "attached_image" %><br/>
-<%= link_to "Delete Image", "/message/delete/"+@message.id.to_s, data: {confirm: 'Are you sure?'} %>
+<%= link_to t('messages.delete_image'), "/message/delete/"+@message.id.to_s, data: {confirm: 'Are you sure?'} %>
   <%= f.button :submit, style: "margin-bottom: 80px" %>
 <% end %>

@@ -12,8 +12,13 @@ Rails.application.routes.draw do
   devise_for :listeners, :controllers => { :registrations => "registrations" }
 
 
+<<<<<<< HEAD
   devise_for :speakers, :controllers => { :registrations => "speaker_registrations" }
   # devise_for :speakers
+=======
+   # devise_for :speakers, :controllers => { :registrations => "speaker_registrations" }
+  devise_for :speakers
+>>>>>>> russian
   resources :speakers, only: [:show] do
     member do
       get 'subscribe'
@@ -28,6 +33,8 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: [:new, :create, :show]
+
+  get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
 
   root 'pages#home'
   get '/about' => 'pages#about'

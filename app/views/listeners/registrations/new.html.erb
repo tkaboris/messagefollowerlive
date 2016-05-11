@@ -1,8 +1,8 @@
-<h2>Sign up as Listener</h2>
+<h2><%= t('listener.sign_up') %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-<h3>Please select speaker you are subscribing to</h3>
+<h3><%= t('listener.choose_speaker') %></h3>
   <div class="form-inputs">
 
     <%= f.association :speakers, as: :check_boxes, label_method: :fullname, value_method: :id %>
@@ -16,14 +16,14 @@
     <div class="row">
       <div class="col-md-4">
         <div class="form-group">
-          <%= f.label :time_zone %>
-          <%= f.time_zone_select(:time_zone, ActiveSupport::TimeZone.all, { default: :UTC }, { class: "form-control"}) %>
+          <%= f.label t("listener.choose_time") %>
+          <%= f.time_zone_select(:time_zone, ActiveSupport::TimeZone.all, { default: "Pacific Time (US & Canada)" }, { class: "form-control"}) %>
         </div>
       </div>
       <div class="col-md-8">
         <div class="form-group">
-          <%= f.label "Recieve message at hour (HH)" %>
-          <%= f.select(:recieve_message_at, (00..23).map{ |i| [format('%02d', i),format('%02d', i)] }, {}, { class: "form-control" } ) %>
+          <%= f.label t("listener.choose_hour") %>
+          <%= f.select(:recieve_message_at, (00..23).map{ |i| [format('%02d', i),format('%02d', i)] }, { }, { class: "form-control" } ) %>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit %>
   </div>
 <% end %>
 

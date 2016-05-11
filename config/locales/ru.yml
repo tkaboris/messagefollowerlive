@@ -26,11 +26,14 @@ ru:
         lastname: "Фамилия"
         speaker_type: "Проповедник ?"
         speaker_bio: "О Проповеднике"
+      listener:
+        name: "Имя"
+        lastname: "Фамилия"
 
   menu:
     about: "О проэкте"
     puritans: "Пуритане"
-    new_message: "Новое Проповедь"
+    new_message: "Добавить Проповедь"
     category: "Категория"
     new_category: "Добавить Категорию"
     listener: "Слушатель"
@@ -97,12 +100,19 @@ ru:
     login_edit_title: "Редактировать ваш профайл."
     sign_up: "Зарегестрируйтесь как слушатель"
     choose_speaker: "Пожалуйста выберите проповедника"
+    choose_time: "Часовая Зона?"
+    choose_hour: "В Какой Час Получать Проповедь?"
+    characters_minimum: " минимальное количество символов"
 
   #log in as speaker
   speaker:
     login_title: "Войдите как проповедник или зарегистрируйтесь"
     login_edit_title: "Отредактировать ваш профайл"
     sign_up: "Зарегестрироватся как проповедник"
+    speakers: "Проповедники"
+    all_speakers: "Все Проповедники"
+    all_messages: "Все Проповеди"
+    messages: "Проповеди"
 
   messages:
     index_title: "Список Проповедей"
@@ -110,7 +120,16 @@ ru:
     new_title: "Добавить Проповедь"
     category: "Категория: ?"
     delete_image: "Убрать Изображение"
-#add new message
+    view_message: "Просмотреть"
+
+  subscribers:
+    subscribers: "Слушателей"
+  mailer:
+    hi: "Уважаемый"
+    you_received_message: "вам пришла новая проповедь от"
+    message_part_title: "Название части проповеди:"
+    description: "Описание"
+
   message:
     new_label: "Название проповеди"
 

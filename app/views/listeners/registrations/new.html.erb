@@ -16,14 +16,14 @@
     <div class="row">
       <div class="col-md-4">
         <div class="form-group">
-          <%= f.label :time_zone %>
-          <%= f.time_zone_select(:time_zone, ActiveSupport::TimeZone.all, { default: :UTC }, { class: "form-control"}) %>
+          <%= f.label t("listener.choose_time") %>
+          <%= f.time_zone_select(:time_zone, ActiveSupport::TimeZone.all, { default: "Pacific Time (US & Canada)" }, { class: "form-control"}) %>
         </div>
       </div>
       <div class="col-md-8">
         <div class="form-group">
-          <%= f.label "Recieve message at hour (HH)" %>
-          <%= f.select(:recieve_message_at, (00..23).map{ |i| [format('%02d', i),format('%02d', i)] }, {}, { class: "form-control" } ) %>
+          <%= f.label t("listener.choose_hour") %>
+          <%= f.select(:recieve_message_at, (00..23).map{ |i| [format('%02d', i),format('%02d', i)] }, { }, { class: "form-control" } ) %>
         </div>
       </div>
     </div>

@@ -46,6 +46,16 @@ en:
         lastname: "Last Name"
         speaker_type: "Speaker Type"
         speaker_bio: "Speaker Bio"
+      listener:
+        name: "Name"
+        lastname: "Last Name"
+    errors:
+      models:
+        listener:
+          attributes:
+            password:
+              confirmation: "Password does not match"
+              too_short: "Password is too short"
 
 
 
@@ -120,12 +130,20 @@ en:
     login_edit_title: "Edit your profile."
     sign_up: "Sign Up as a listener."
     choose_speaker: "Please select speaker you are subscribing to"
+    choose_time: "What Time Zone?"
+    choose_hour: "What Hour To Receive Messages"
+    characters_minimum: "characters minimum"
 
   #log in as speaker
   speaker:
     login_title: "Log In as a speaker or Sign Up."
     login_edit_title: "Edit your profile."
     sign_up: "Sign Up as a speaker."
+    speakers: "Speakers"
+    all_speakers: "All Speakers"
+    all_messages: "All Messages"
+    messages: "Messages"
+
 
   messages:
     index_title: "List of Messages"
@@ -133,6 +151,15 @@ en:
     new_title: "New Message"
     category: "Category: ?"
     delete_image: "Delete Image"
+    view_message: "View Message"
+
+  subscribers:
+    subscribers: "Listeners"
+  mailer:
+    hi: "Hi"
+    you_received_message: "You have received a message from"
+    message_part_title: "Message Part Title:"
+    description: "Description"
 
   #add new message
   message:

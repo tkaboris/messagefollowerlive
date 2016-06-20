@@ -23,7 +23,7 @@ end
   end
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:organization, :name, :lastname, :email, :password, :speaker_type, :speaker_bio) }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :lastname, :email, :password, :current_password, :avatar, :organization, :speaker_type, :speaker_bio, :attachments_attributes => [:file, :_destroy, :id]) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:organization, :address, :city, :state, :zipcode, :name, :lastname, :email, :password, :speaker_type, :speaker_bio) }
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :address, :city, :state, :zipcode, :lastname, :email, :password, :current_password, :avatar, :organization, :speaker_type, :speaker_bio, :attachments_attributes => [:file, :_destroy, :id]) }
   end
 end

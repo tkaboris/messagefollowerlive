@@ -6,6 +6,10 @@
 
   <div class="form-inputs">
     <%= f.input :organization, required: true %>
+    <%= f.input :address, required: true %>
+    <%= f.input :city, required: true %>
+    <%= f.input :state, required: true %>
+    <%= f.input :zipcode, required: true %>
     <%= f.input :name, required: true, autofocus: true %>
     <%= f.input :lastname, required: true, autofocus: true %>
     <%= f.input :speaker_type, :collection => ["Pastor","Associate","Group_Leader","Music","Other"] %>

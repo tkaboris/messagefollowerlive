@@ -18,6 +18,10 @@
     <%= f.file_field :avatar %>
     <hr>
     <%= f.input :organization %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zipcode %>
     <%= f.input :name, required: true, autofocus: true %>
     <%= f.input :lastname, required: true, autofocus: true %>
     <%= f.input :speaker_type,  :collection => ["Pastor","Associate","Group_Leader","Music","Other"] %>

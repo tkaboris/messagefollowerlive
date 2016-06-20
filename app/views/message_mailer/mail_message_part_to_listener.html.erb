@@ -10,7 +10,7 @@
     <h3 style="color: #000;"><%= t('mailer.message_part_title') %>  <hr /><%= @messagepart.contentparttitle %></h3>
     <p ><%= raw @messagepart.contentpart %></p><br />
     <hr/>
-    You received this message from <%= @message.speaker.organization %>, located at <%= @message.speaker.address %> <%= @message.speaker.city %> <%= @message.speaker.state %> <%= @message.speaker.zipcode %>. To unsubscribe, please click <%= link_to "here", @listener %>.
+    You received this message from <%= @message.speaker.organization %>, located at <%= @message.speaker.address %> <%= @message.speaker.city %> <%= @message.speaker.state %> <%= @message.speaker.zipcode %>. To unsubscribe, please click here
   </body>
 
   <!-- <body>

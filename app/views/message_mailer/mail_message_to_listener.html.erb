@@ -10,7 +10,7 @@
     <h3 style="color: #000;"><%= t('mailer.description') %> <strong style="font-size: 12px; color: #444;"><%= @message.description %></strong></h3><hr/>
     <p style="font-size: 12px;"><%= raw @message.content %></p><br/>
 <hr />
-You received this message from <%= @message.speaker.organization %>, located at <%= @message.speaker.address %> <%= @message.speaker.city %> <%= @message.speaker.state %> <%= @message.speaker.zipcode %>. To unsubscribe please click <%= link_to "Unsubscribe", "http://messagefollower.com/listeners/sign_in", :target => "_blank" %>
+You received this message from <%= @message.speaker.organization %>, located at <%= @message.speaker.address %> <%= @message.speaker.city %> <%= @message.speaker.state %> <%= @message.speaker.zipcode %>. To unsubscribe please click here.
 
 
 
